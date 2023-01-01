@@ -1,6 +1,3 @@
-# mosquitto-edge-cloud-experiment
-
-This project aims to study the feasibility and cost-effectiveness of using edge computing for stream data processing in the context of the Internet of Things (IoT) in manufacturing in Europe. We will consider two scenarios: one in which edge computing is used to reduce latency and improve proximity, and another in which a public cloud provider is used. We believe that there is a high concentration of data centers in Europe and that there are protocols that can be used to transfer large amounts of data to public clouds or edge computing nodes. By comparing stream processing platforms in these two scenarios, we hope to gain insight into the best approach for stream processing and to establish a basic setup for stream processing.
 
 
 
@@ -46,8 +43,6 @@ It publishes x amount of messages from multiple devices to an MQTT broker as fol
 About run_serv-wstats.py
 
 The intention of this script is to generate a monitoring app on the "broker" side. Get an average of performance for memory, CPU, time and network performance (pcap generation on the specific port for the aplication)
-
-Currently there are 2 versions, one in pzthon and one in bash .  run_ser-wstats/(BASH)
     
 Desired functions:
 -Set several variables including the command to monitor, the port to monitor, the interface to use for packet capture, the duration to run the script the output file for performance data, and the pcap file to capture traffic.
