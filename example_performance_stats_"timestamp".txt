@@ -1,0 +1,2 @@
+Average CPU usage: 0.0%
+Average memory usage: 0.745472 MB
