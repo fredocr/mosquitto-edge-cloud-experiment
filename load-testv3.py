@@ -15,7 +15,7 @@ topics = ["sensor1", "sensor2", "sensor3"]
 num_devices = 1000
 
 # Set the number of messages to publish per device
-num_messages = 100
+num_messages = 200
 
 # Function to generate random data
 def generate_data():

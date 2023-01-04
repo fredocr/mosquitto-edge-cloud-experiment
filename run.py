@@ -41,5 +41,5 @@ with open(output_stats_file, 'w') as f:
     f.write("Average memory usage: {} bytes\n".format(average_memory_usage))
     f.write("Average running time: {} seconds\n".format(elapsed_time))
 
-# Save pcap capture to file
+# Save pcap capture to file  not working at the moment 
 #capture.save_to_file(output_pcap_file)
