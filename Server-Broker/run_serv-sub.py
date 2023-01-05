@@ -1,5 +1,4 @@
 import paho.mqtt.client as mqtt
-import time
 
 def on_connect(client, userdata, flags, rc):
     print("Connected with result code " + str(rc))
@@ -12,18 +11,17 @@ def on_message(client, userdata, msg):
     payload = msg.payload.decode()
     print(f"{topic}: {payload}")
 
+    if payload == "apple":
+        print("The word apple has been received")
+        # Stop the MQTT client loop
+        client.loop_stop()
+        # Disconnect the client
+        client.disconnect()
+
 client = mqtt.Client()
 client.on_connect = on_connect
 client.on_message = on_message
 
 client.connect("localhost", 1883, 60)
 
-start_time = time.time()
-client.loop_start()
-
-while True:
-    time.sleep(1)
-    elapsed_time = time.time() - start_time
-    print(f"Elapsed time: {elapsed_time} seconds")
-
-client.loop_stop()
+client.loop_forever()
