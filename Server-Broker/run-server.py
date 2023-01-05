@@ -17,7 +17,7 @@ capture = pyshark.LiveCapture(interface=interface)
 capture.sniff(timeout=5)
 
 # Run external script "load-testv3.py"
-process = subprocess.Popen(["python", "run_serv-wstats.py"])
+process = subprocess.Popen(["python", "run_serv-sub.py"])
 
 # Monitor performance of "load-testv3.py"
 cpu_usage = []

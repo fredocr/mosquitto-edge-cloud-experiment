@@ -1,3 +1,0 @@
-Average CPU usage: 21.3451851851852%
-Average memory usage: 20232874.666666668 bytes
-Average running time: 13.566948175430298 seconds
