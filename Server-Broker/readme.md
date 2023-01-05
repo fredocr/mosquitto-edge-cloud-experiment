@@ -1,4 +1,4 @@
-run-server.py  to get the average stats or memory and cpu. This script runs run-server.py.
+Run "run-server.py"  to get the average stats or memory and cpu of mosquitto_sub. This script runs run-server.py to suscribe to the sensors. 
 
 about: 
 
