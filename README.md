@@ -20,7 +20,7 @@ About run.py
 
 
 
-About load-testv3.py
+**** About load-testv3.py ****
 
 This script generates the simulation from the "edge" source. The original porpoise is to simulate comunciation between IoT devices and the broker, to analize performance and efficiency between the node and the broker.
 It publishes x amount of messages from multiple devices to an MQTT broker as follows: 
@@ -45,7 +45,7 @@ It publishes x amount of messages from multiple devices to an MQTT broker as fol
 
 SERVER BROKER FOLDER - RUNS ON THE BROKER/SERVER 
 
-****  About run_server.py
+****  About run_server.py****
 
 The intention of this script is to generate a monitoring app on the "broker" side. Get an average of performance for memory, CPU, time and network performance (pcap generation on the specific port for the aplication)
 
@@ -58,26 +58,42 @@ When the client receives a message from the broker, the on_message() callback fu
 
 
 
-**** About PCAP functionality, 
+**** About PCAP functionality****
 
 The code was intended to include pcap functionality, but at the end it was triggered manually to provide more felxibility to the captures and its tunning. 
 
 sudo tcpdump -qns 0 -X -A -w  name.pcap
 
 
-**** System dependancies
+************************************************************************************************************************************
+
+  **** System dependancies for both client and server ****
+  
 apt install -y mosquitto mosquitto mosquitto-dev mosquitto_sub
+
 apt install mosquitto-clients
+
 install python3
+
 apt install python3-pip
+
 pip install paho.mqtt
+
 pip install psutil
+
 pip install pyshark
+
 pip install tshark
+
 apt-get install tshark
+
 sudo  ln -s $(which python3) /usr/local/bin/python
+
 sudo dpkg-reconfigure wireshark-common
+
 sudo chmod +x /usr/bin/dumpcap
+
+************************************************************************************************************************************
 
 
 ########     Misssing readme instruction on latency pythons scripts ( intended ti run for less to graph latency measurements in 2 scenarios)
