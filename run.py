@@ -9,8 +9,8 @@ interface = 'any'
 
 # Generate output file names with timestamp
 timestamp = time.strftime("%Y%m%d-%H%M%S")
-output_pcap_file = "output.pcap" if not os.path.exists("output.pcap") else "output_{}.pcap".format(timestamp)
-output_stats_file = "performance_stats.txt" if not os.path.exists("performance_stats.txt") else "performance_stats_{}.txt".format(timestamp)
+output_pcap_file = "output_server.pcap" if not os.path.exists("output.pcap") else "output_{}.pcap".format(timestamp)
+output_stats_file = "performance_IoT_stats.txt" if not os.path.exists("performance_stats.txt") else "performance_stats_{}.txt".format(timestamp)
 
 # Start pcap capture on local interface
 capture = pyshark.LiveCapture(interface=interface)

@@ -57,6 +57,9 @@ while time.time() - start_time < run_time:
 
     # Sleep for 1 second before publishing again
     time.sleep(1)
+    
+# Sends the word apple, so server could parse it and abort sript.
+client.publish(topic, "apple")
 
 # Function to show a summary of the data transferred
 def show_summary():

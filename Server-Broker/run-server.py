@@ -16,10 +16,10 @@ output_stats_file = "performance_server_stats.txt" if not os.path.exists("perfor
 capture = pyshark.LiveCapture(interface=interface)
 capture.sniff(timeout=5)
 
-# Run external script "load-testv3.py"
+# Run external script "run_serv-sub.pyrun_serv-sub.py"
 process = subprocess.Popen(["python", "run_serv-sub.py"])
 
-# Monitor performance of "load-testv3.py"
+# Monitor performance of "run_serv-sub.py"
 cpu_usage = []
 memory_usage = []
 start_time = time.time()
